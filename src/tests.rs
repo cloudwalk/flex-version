@@ -58,3 +58,10 @@ fn test_vendor_version() {
         .parse::<Version>()
         .expect("invalid version");
 }
+
+#[test]
+fn test_version_with_timestamp() {
+    "3.10.0+20251203173456"
+        .parse::<Version>()
+        .expect("invalid version");
+}
