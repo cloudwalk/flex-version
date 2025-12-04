@@ -24,7 +24,7 @@ pub const COMPONENT_SEPARATORS: &str = ".-_+";
 #[derive(Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub enum Component {
     Identifier(Box<str>),
-    Number(u32),
+    Number(u64),
 }
 
 /// The default Component is the number zero.
