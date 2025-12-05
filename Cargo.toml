@@ -2,7 +2,7 @@
 name = "flex-version"
 description = "A crate for flexible version numbers, mostly inspired by Ruby's Gem::Version"
 authors = [ "cloudwalk.io" ]
-version = "0.3.1"
+version = "0.4.0"
 edition = "2021"
 license = "MIT"
 repository = "https://github.com/cloudwalk/flex-version"
