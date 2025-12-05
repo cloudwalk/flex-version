@@ -17,7 +17,7 @@ use util::SplitPrefix;
 
 /// The characters that are hard delimiters for components.
 /// This constant is public more as a matter of documentation than of utility.
-pub const COMPONENT_SEPARATORS: &str = ".-_+";
+pub const COMPONENT_SEPARATORS: &str = ".-_+:";
 
 /// A component is a indivisible part of a version.
 /// May be a number, or a alphabetic identifier.
