@@ -65,3 +65,24 @@ fn test_version_with_timestamp() {
         .parse::<Version>()
         .expect("invalid version");
 }
+
+#[test]
+fn test_version_with_iso8601_timestamp() {
+    let utc = "1.0.0+2025-12-03T17:34:56Z"
+        .parse::<Version>()
+        .expect("invalid version");
+    let tz_minus = "1.0.0+2025-12-03T17:34:56-03:00"
+        .parse::<Version>()
+        .expect("invalid version");
+    let tz_plus = "1.0.0+2025-12-03T17:34:56+03:00"
+        .parse::<Version>()
+        .expect("invalid version");
+    let tz_plus_2 = "1.0.0+2025-12-03T17:34:56+02:00"
+        .parse::<Version>()
+        .expect("invalid version");
+    assert!(utc < tz_minus);
+    assert!(utc < tz_plus);
+    assert!(tz_minus == tz_plus);
+    assert!(tz_minus > tz_plus_2);
+    assert!(tz_plus > tz_plus_2);
+}
